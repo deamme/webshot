@@ -1,0 +1,16 @@
+{
+  "name": "webshot",
+  "version": 2,
+  "builds": [
+    { "src": "public/*", "use": "@now/static" },
+    {
+      "src": "screenshot.js",
+      "use": "@now/node",
+      "config": { "maxLambdaSize": "40mb" }
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/(.+)", "dest": "/screenshot.js" }
+  ]
+}

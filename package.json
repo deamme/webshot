@@ -1,0 +1,14 @@
+{
+  "name": "webshot",
+  "version": "1.0.0",
+  "description": "Take screenshot of website",
+  "main": "dev.js",
+  "scripts": {
+    "dev": "node dev.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "^1.11.1",
+    "puppeteer-core": "^1.11.0"
+  }
+}
