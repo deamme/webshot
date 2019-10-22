@@ -1,8 +1,12 @@
 const chrome = require('chrome-aws-lambda')
-const puppeteer = require('puppeteer-core')
 
 async function getScreenshot(url, type, quality, fullPage) {
-  const browser = await puppeteer.launch({
+  // emoji support
+  await chrome.font(
+    'https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf'
+  )
+
+  const browser = await chrome.puppeteer.launch({
     args: chrome.args,
     executablePath: await chrome.executablePath,
     headless: chrome.headless,
