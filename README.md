@@ -6,5 +6,8 @@ The images are getting cached for 1 minute and only the first load takes some ti
 ## Use cases
 - You could use this as a preview image for your website in `og:image` or `twitter:image`
 
+## Used in
+- https://github.com/deamme/usecrypto
+
 ## Credits
 - https://github.com/styfle/screenshot-v2
