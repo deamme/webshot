@@ -10,6 +10,7 @@ async function getScreenshot(url, type, quality, fullPage) {
     args: chrome.args,
     executablePath: await chrome.executablePath,
     headless: chrome.headless,
+    ignoreHTTPSErrors: true,
   })
 
   const page = await browser.newPage()
