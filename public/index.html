@@ -1,27 +1,88 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Screenshot as a service</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <h1>Screenshot as a service</h1>
-    <p>Please provide a path to a website or choose one of the following:</p>
-    <ul>
-      <li><a href="/google.com">/google.com</a></li>
-      <li><a href="/zeit.co/blog?type=png">/zeit.co/blog?type=png</a></li>
+<head>
+	<title>Webshot</title>
+
+	<style type="text/css">
+		.heading {
+			text-align: center;
+			color: #F64C72;
+		}
+
+		.howTo {
+			padding: 50px;
+		}
+
+		.otherExamples {
+			padding: 50px;
+		}
+		body {
+			background-color: #242582;
+			color: white;
+		}
+
+		code {
+			color: #99738E;
+		}
+
+		a {
+			text-decoration: none;
+			color: #99738E;
+		}
+	</style>
+</head>
+<body>
+	<div class="heading">
+		<h1> Webshot </h1>
+		<h3> Screenshot as a Service </h3>
+	</div>
+	
+
+	<div class="howTo">
+		<p>
+			<h3>How to - </h3>
+
+		</p>
+		Simply add the link of the website you want to screenshot to the end of <code>https://webshot.deam.io/</code> 
+
+		<br>
+		<p>
+			Example - 
+
+			<code>
+				https://webshot.deam.io/ + https://www.google.com/
+			</code>
+
+			<br>
+
+			That is - 
+
+			<code>
+				https://webshot.deam.io/https://www.google.com/
+			</code>
+
+		</p>
+
+		Now this link can be shared anywhere <strong>easily and quickly!</strong><br>
+	</div>
+
+	<div class="otherExamples">
+        <h3>	Other examples - </h3>
+		<ul>
+      <li><a href="/google.com"><code>https://webshot.deam.io/ + https://www.google.com/</code></a></li>
+      <li><a href="/zeit.co/blog?type=png"><code>https://webshot.deam.io/ + zeit.co/blog/ + ?type=png</code></a></li>
       <li>
-        <a href="/zeit.co/about?fullPage=true">/zeit.co/about?fullPage=true</a>
+        <a href="/zeit.co/about?fullPage=true"><code>https://webshot.deam.io/ + zeit.co/about/ + ?fullPage=true</code></a>
       </li>
       <li>
-        <a href="/stripe.com?fullPage=true">/stripe.com?fullPage=true</a>
+        <a href="/stripe.com?fullPage=true"><code>https://webshot.deam.io/ + stripe.com/ + ?fullPage=true</code></a>
       </li>
       <li>
-        <a href="/ceriously.com?type=jpeg&quality=75&fullPage=true"
-          >/ceriously.com?type=jpeg&quality=75&fullPage=true</a
-        >
+        <a href="/ceriously.com?type=jpeg&quality=75&fullPage=true">
+        	<code>https://webshot.deam.io/ + ceriously.com/ + ?type=jpeg&quality=75&fullPage=true</code>
+        </a>
       </li>
     </ul>
-  </body>
+	</div>
+</body>
 </html>
