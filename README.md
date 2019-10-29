@@ -3,6 +3,24 @@ Screenshot websites as a service.
 
 The images are getting cached for 1 minute and only the first load takes some time to process.
 
+## How to Use
+
+Simply add the link of the website you want to screenshot to the end of https://webshot.deam.io/.
+
+Example, to grab a screenshot of https://www.google.com/ use: https://webshot.deam.io/https://www.google.com/
+
+
+### Other examples
+
+```
+https://webshot.deam.io/ + https://www.google.com/
+https://webshot.deam.io/ + zeit.co/blog/ + ?type=png
+https://webshot.deam.io/ + zeit.co/about/ + ?fullPage=true
+https://webshot.deam.io/ + stripe.com/ + ?fullPage=true
+https://webshot.deam.io/ + ceriously.com/ + ?type=jpeg&quality=75&fullPage=true
+https://webshot.deam.io/ + https://hacktoberfest.digitalocean.com/ + ?height=1000&width=1000
+```
+
 ## Use cases
 - You could use this as a preview image for your website in `og:image` or `twitter:image` (tutorial [here](https://dev.to/deam/easy-social-media-preview-card-generation-1ln7))
 - Grab a screenshot of a bug in production, send the link instead of an image
