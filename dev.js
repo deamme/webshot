@@ -1,5 +1,8 @@
 const { createServer } = require('http')
 const PORT = 1234
-const handleServer = require('./screenshot')
+const handleServer = require('./api')
 const handleListen = () => console.log(`Listening on ${PORT}...`)
-createServer(handleServer).listen(PORT, handleListen)
+
+createServer((req, res) => {
+  handleServer(req, res)
+}).listen(PORT, handleListen)

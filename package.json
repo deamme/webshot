@@ -4,14 +4,16 @@
   "description": "Take screenshot of website",
   "main": "dev.js",
   "scripts": {
-    "dev": "node dev.js"
+    "dev:api": "node dev.js",
+    "dev:page": "now dev"
   },
   "license": "MIT",
   "dependencies": {
-    "chrome-aws-lambda": "^1.11.1",
-    "puppeteer-core": "^1.11.0"
+    "chrome-aws-lambda": "^2.1.1",
+    "puppeteer-core": "^2.1.1"
   },
   "devDependencies": {
-    "puppeteer": "^1.20.0"
+    "now": "^18.0.0",
+    "puppeteer": "^2.1.1"
   }
 }

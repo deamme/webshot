@@ -1,11 +1,17 @@
 const { parse } = require('url')
-const { getScreenshot } = require('./chromium')
-const { getInt, getUrlFromPath, isValidUrl } = require('./validator')
+const { getScreenshot } = require('./lib/chromium')
+const { getInt, getUrlFromPath, isValidUrl } = require('./lib/validator')
 
-module.exports = async function(req, res) {
+module.exports = async function (req, res) {
   try {
     const { pathname = '/', query = {} } = parse(req.url, true)
-    const { type = 'png', quality, fullPage, height = 1920, width = 1080 } = query
+    const {
+      type = 'png',
+      quality,
+      fullPage,
+      height = 1920,
+      width = 1080,
+    } = query
     const url = getUrlFromPath(pathname)
     const qual = getInt(quality)
     const h = getInt(height)
@@ -14,7 +20,7 @@ module.exports = async function(req, res) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'text/html')
       res.end(
-        `<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`
+        `<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`,
       )
     } else {
       const file = await getScreenshot(url, type, qual, fullPage, h, w)
