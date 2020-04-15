@@ -1,0 +1,190 @@
+@import url('https://rsms.me/inter/inter.css');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+@keyframes shine {
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .brand {
+    margin-top: 8rem;
+    font-size: 82px;
+    font-weight: 900;
+
+    color: #4149dd;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(20%, #4149dd),
+      color-stop(40%, #8755f1),
+      color-stop(60%, #8755f1),
+      color-stop(80%, #4149dd)
+    );
+    background-image: linear-gradient(
+      90deg,
+      #4149dd 20%,
+      #8755f1 40%,
+      #8755f1 60%,
+      #4149dd 80%
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 12s linear 0s infinite normal none running;
+    animation: shine 12s linear 0s infinite normal none running;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(102, 102, 102);
+  }
+
+  .search-bar {
+    margin-top: 4rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.15),
+      0 2px 4px 0 rgba(93, 100, 148, 0.2);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    .search-icon {
+      color: #8755f1;
+      width: 2rem;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      font-size: 18px;
+      margin-left: 1rem;
+      width: 24rem;
+    }
+  }
+
+  .link {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+  }
+
+  .gallery {
+    // margin-top: 4rem;
+
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  }
+
+  .preview-card {
+    margin-bottom: 4rem;
+    img {
+      border-radius: 0.25rem;
+      box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.15),
+        0 2px 4px 0 rgba(93, 100, 148, 0.2);
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
