@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
 
 import { Helmet } from 'react-helmet'
 import GithubCorner from 'react-github-corner'
-
-import './styles.scss'
 
 function PreviewCard({ src }) {
   return <div className="preview-card">{src && <img src={src} alt="Preview card" />}</div>
@@ -37,6 +34,8 @@ function Metatags() {
       <meta property="twitter:title" content="Webshot" />
       <meta property="twitter:description" content="Screenshot websites as a Service" />
       <meta property="twitter:image" content="https://webshot.deam.io/https://webshot.deam.io/" />
+
+      <link rel="stylesheet" href="styles.css" />
     </Helmet>
   )
 }
@@ -64,7 +63,7 @@ function SearchBar(props) {
   )
 }
 
-export function App() {
+export default function App() {
   const [search, setSearch] = useState('')
   const [website, setWebsite] = useState('expo.io')
   const [option, setOption] = useState(0)
@@ -121,5 +120,3 @@ export function App() {
     </div>
   )
 }
-
-ReactDOM.render(<App />, document.getElementById('root'))

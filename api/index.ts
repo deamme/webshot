@@ -1,10 +1,9 @@
-import { NowRequest, NowResponse } from '@now/node'
 import { parse } from 'url'
 
 import { getScreenshot } from './lib/chromium'
 import { getInt, getUrlFromPath, isValidUrl } from './lib/validator'
 
-export default async function (req: NowRequest, res: NowResponse) {
+export default async function (req, res) {
   try {
     const { pathname = '/', query = {} } = parse(req.url, true)
     const { type = 'png', quality, fullPage, height = 1920, width = 1080 } = query

@@ -3,4 +3,6 @@ package-lock.json
 .now
 .cache
 dist
-public
+.next
+out
+/public
