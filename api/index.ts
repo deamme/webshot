@@ -1,17 +1,13 @@
+import { NowRequest, NowResponse } from '@now/node'
 import { parse } from 'url'
+
 import { getScreenshot } from './lib/chromium'
 import { getInt, getUrlFromPath, isValidUrl } from './lib/validator'
 
-export default async function (req, res) {
+export default async function (req: NowRequest, res: NowResponse) {
   try {
     const { pathname = '/', query = {} } = parse(req.url, true)
-    const {
-      type = 'png',
-      quality,
-      fullPage,
-      height = 1920,
-      width = 1080,
-    } = query
+    const { type = 'png', quality, fullPage, height = 1920, width = 1080 } = query
     const url = getUrlFromPath(pathname)
     const qual = getInt(quality)
     const h = getInt(height)
@@ -19,9 +15,7 @@ export default async function (req, res) {
     if (!isValidUrl(url)) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'text/html')
-      res.end(
-        `<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`,
-      )
+      res.end(`<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`)
     } else {
       const file = await getScreenshot(url, type, qual, fullPage, h, w)
       res.statusCode = 200

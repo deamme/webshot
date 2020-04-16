@@ -1,17 +1,8 @@
-import * as chrome from 'chrome-aws-lambda'
+import chrome from 'chrome-aws-lambda'
 
-export async function getScreenshot(
-  url,
-  type,
-  quality,
-  fullPage,
-  height,
-  width,
-) {
+export async function getScreenshot(url, type, quality, fullPage, height, width) {
   // emoji support
-  await chrome.font(
-    'https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf',
-  )
+  await chrome.font('https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf')
 
   const browser = await chrome.puppeteer.launch({
     args: chrome.args,
