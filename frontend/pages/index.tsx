@@ -26,14 +26,14 @@ function Metatags() {
       <meta property="og:url" content="https://webshot.deam.io/" />
       <meta property="og:title" content="Webshot" />
       <meta property="og:description" content="Screenshot websites as a Service" />
-      <meta property="og:image" content="https://webshot.deam.io/https://webshot.deam.io/" />
+      <meta property="og:image" content="https://webshot.deam.io/https:/webshot.deam.io/?height=630&width=1200" />
 
       {/** Twitter  **/}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://webshot.deam.io" />
       <meta property="twitter:title" content="Webshot" />
       <meta property="twitter:description" content="Screenshot websites as a Service" />
-      <meta property="twitter:image" content="https://webshot.deam.io/https://webshot.deam.io/" />
+      <meta property="twitter:image" content="https://webshot.deam.io/https:/webshot.deam.io/?height=630&width=1200" />
 
       {/** Google Analytics  **/}
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70354592-4"></script>
@@ -102,6 +102,9 @@ export default function App() {
         <GithubCorner href="https://github.com/deamme/webshot/" />
         <h1 className="brand">Webshot</h1>
         <h2 className="description">Screenshot websites as a Service</h2>
+        <p>
+          Created by <a href="https://twitter.com/deamlabs">@deamlabs</a>
+        </p>
         <SearchBar
           value={search}
           onChange={e => setSearch(e.currentTarget.value)}
