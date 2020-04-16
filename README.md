@@ -27,14 +27,16 @@ https://webshot.deam.io/ + https://hacktoberfest.digitalocean.com/ + ?height=100
 ## Workflow
 
 ### Development
-- First install all dependencies. `npm install`
+- First install all dependencies. `npm i`
 - You can then run `npm run api` to play around with the API itself.
-- If you want to preview the landing page, you can run `npm run start`.
+- If you want to preview the landing page, you can go to `frontend` folder and `npm i`. 
+- Lastly you can run `npm run dev`.
 
 ### Production
-- Install `now` globally. `npm install now -g`
-- Create an account at https://zeit.co/signup and then run `now login`.
-- Finally you can run the `now` command in terminal and it will begin to deploy.
+- Go to `frontend` folder, install dependencies and then run `npm run build`.
+- Rename the `out` folder to `public` and then move it into the root directory.
+- Create an account at https://zeit.co/signup and then run `npx now login`.
+- Finally you can run the `npx now` command in terminal and it will begin to deploy.
 
 ## Used in
 - https://github.com/deamme/usecrypto
