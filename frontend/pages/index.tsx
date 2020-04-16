@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Helmet } from 'react-helmet'
+import Head from 'next/head'
 import GithubCorner from 'react-github-corner'
 
 function PreviewCard({ src }) {
@@ -13,7 +13,7 @@ function Gallery({ children }) {
 
 function Metatags() {
   return (
-    <Helmet>
+    <Head>
       <meta charSet="utf-8" />
 
       {/** Primary Meta Tags **/}
@@ -36,7 +36,7 @@ function Metatags() {
       <meta property="twitter:image" content="https://webshot.deam.io/https://webshot.deam.io/" />
 
       <link rel="stylesheet" href="styles.css" />
-    </Helmet>
+    </Head>
   )
 }
 
