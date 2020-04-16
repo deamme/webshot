@@ -35,6 +35,21 @@ function Metatags() {
       <meta property="twitter:description" content="Screenshot websites as a Service" />
       <meta property="twitter:image" content="https://webshot.deam.io/https://webshot.deam.io/" />
 
+      {/** Google Analytics  **/}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70354592-4"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-70354592-4');
+              `,
+        }}
+      />
+
+      {/** Styles  **/}
       <link rel="stylesheet" href="styles.css" />
     </Head>
   )
