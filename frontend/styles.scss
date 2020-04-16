@@ -95,7 +95,13 @@ select {
   }
 }
 
-.Wrapper {
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,12 +176,38 @@ select {
     font-size: 24px;
   }
 
-  .gallery {
-    // margin-top: 4rem;
+  .options {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 36%;
 
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    button {
+      cursor: pointer;
+      border: 1px solid grey;
+      border-radius: 0.25rem;
+      padding: 1rem;
+      background-color: white;
+      outline: none;
+
+      &:hover {
+        box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.15),
+          0 2px 4px 0 rgba(93, 100, 148, 0.2);
+        border: none;
+      }
+      &.active {
+        box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.15),
+          0 2px 4px 0 rgba(93, 100, 148, 0.2);
+        border: none;
+      }
+    }
   }
+}
+
+.gallery {
+  width: 50%;
+  padding-right: 8rem;
+  padding-top: 8rem;
 
   .preview-card {
     margin-bottom: 4rem;
