@@ -174,7 +174,7 @@ input {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
-  width: 36%;
+  width: 24rem;
 }
 
 button {
@@ -210,4 +210,20 @@ button.active {
   box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.15), 0 2px 4px 0 rgba(93, 100, 148, 0.2);
   object-fit: cover;
   width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+  .gallery {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
