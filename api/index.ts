@@ -1,8 +1,8 @@
-const { parse } = require('url')
-const { getScreenshot } = require('./lib/chromium')
-const { getInt, getUrlFromPath, isValidUrl } = require('./lib/validator')
+import { parse } from 'url'
+import { getScreenshot } from './lib/chromium'
+import { getInt, getUrlFromPath, isValidUrl } from './lib/validator'
 
-module.exports = async function (req, res) {
+export default async function (req, res) {
   try {
     const { pathname = '/', query = {} } = parse(req.url, true)
     const {

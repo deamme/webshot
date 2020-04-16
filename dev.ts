@@ -1,6 +1,8 @@
-const { createServer } = require('http')
+import { createServer } from 'http'
+import handleServer from './api'
+
 const PORT = 1234
-const handleServer = require('./api')
+
 const handleListen = () => console.log(`Listening on ${PORT}...`)
 
 createServer((req, res) => {
