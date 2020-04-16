@@ -28,7 +28,7 @@ https://webshot.deam.io/ + https://hacktoberfest.digitalocean.com/ + ?height=100
 
 ### Development
 - First install all dependencies. `npm install`
-- You can then run `npm run dev:api` to play around with the API itself.
+- You can then run `npm run api` to play around with the API itself.
 - If you want to preview the landing page, you can run `npm run start`.
 
 ### Production

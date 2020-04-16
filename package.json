@@ -4,7 +4,7 @@
   "description": "Take screenshot of website",
   "main": "dev.js",
   "scripts": {
-    "dev:api": "node dev.js",
+    "api": "node dev.js",
     "start": "ts-node -T fuse",
     "dist": "ts-node -T fuse dist",
     "preview": "ts-node -T fuse preview"
