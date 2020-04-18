@@ -13,6 +13,10 @@
   "dependencies": {
     "next": "^9.3.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-github-corner": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34"
   }
 }
