@@ -92,6 +92,8 @@ export default function App() {
       link = 'https://webshot.deam.io/' + website + '?fullPage=true'
     } else if (option === 2) {
       link = 'https://webshot.deam.io/' + website + '?width=1280&height=720'
+    } else if (option === 3) {
+      link = 'https://webshot.deam.io/' + website + '?delay=2000'
     }
   }
 
@@ -124,6 +126,9 @@ export default function App() {
           </button>
           <button className={option === 2 ? 'active' : ''} onClick={() => setOption(2)}>
             1280x720
+          </button>
+          <button className={option === 3 ? 'active' : ''} onClick={() => setOption(3)}>
+            Delay
           </button>
         </div>
         {link && (
